@@ -1,0 +1,2054 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "e10aeb7a-1750-483f-9ab9-9dc3dfddf134",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "announcements",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "employees",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "fuel_prices",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "fuelings",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "promotion_events",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "promotions",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "register_changes",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "registers",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "sessions",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "shifts",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "isRlsEnabled": false,
+      "name": "station_settings",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "title",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "body",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "category",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'internal'",
+      "generated": null,
+      "identity": null,
+      "name": "visibility",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "important",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'draft'",
+      "generated": null,
+      "identity": null,
+      "name": "status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "published_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "expires_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "author_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "login",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'pracownik'",
+      "generated": null,
+      "identity": null,
+      "name": "role",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "pin_hash",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "true",
+      "generated": null,
+      "identity": null,
+      "name": "active",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "0",
+      "generated": null,
+      "identity": null,
+      "name": "failed_attempts",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "locked_until",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "employees"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "fuel_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuel_prices"
+    },
+    {
+      "type": "numeric(10,3)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "price",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuel_prices"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuel_prices"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuel_prices"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "client_ref",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "shift_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "register_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "employee_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "doc_number",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "doc_type",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "pump",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "fuel_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "fuel_name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(10,2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "liters",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(10,3)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "price_per_liter",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(12,2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "gross_amount",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(12,2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'0'",
+      "generated": null,
+      "identity": null,
+      "name": "discount_amount",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(12,2)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "amount",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "promotion_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "jsonb",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "promotion_snapshot",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "payment",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(12,2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cash_given",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "numeric(12,2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "change",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "vitay_mode",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "vitay_card_masked",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "vitay_test",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "vitay_phone_masked",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "nip",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "company",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'active'",
+      "generated": null,
+      "identity": null,
+      "name": "status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cancelled_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cancelled_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cancel_reason",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "promotion_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "action",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "employee_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "title",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "''",
+      "generated": null,
+      "identity": null,
+      "name": "description",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "jsonb",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'[]'",
+      "generated": null,
+      "identity": null,
+      "name": "fuel_ids",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'info'",
+      "generated": null,
+      "identity": null,
+      "name": "discount_type",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "numeric(10,3)",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'0'",
+      "generated": null,
+      "identity": null,
+      "name": "discount_value",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "false",
+      "generated": null,
+      "identity": null,
+      "name": "requires_vitay",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "numeric(10,2)",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "min_liters",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "''",
+      "generated": null,
+      "identity": null,
+      "name": "conditions",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "valid_from",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "valid_to",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'draft'",
+      "generated": null,
+      "identity": null,
+      "name": "status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "created_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "shift_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "from_register_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "to_register_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "reason",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "approved_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "changed_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "registers"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "code",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "registers"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "registers"
+    },
+    {
+      "type": "boolean",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "true",
+      "generated": null,
+      "identity": null,
+      "name": "active",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "registers"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "registers"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "sessions"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "employee_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "sessions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "sessions"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "expires_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "sessions"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "employee_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "register_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'open'",
+      "generated": null,
+      "identity": null,
+      "name": "status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "started_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "ended_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "opening_note",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "closing_note",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "key",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "station_settings"
+    },
+    {
+      "type": "jsonb",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "value",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "station_settings"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "updated_by",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "station_settings"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "station_settings"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "shift_id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "fuelings_shift_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "created_at",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "fuelings_created_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "employee_id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": true,
+      "where": "status = 'open'",
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "shifts_open_employee_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "register_id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": true,
+      "where": "status = 'open'",
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "shifts_open_register_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "started_at",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "shifts_started_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "author_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "announcements_author_id_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "updated_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "announcements_updated_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "announcements"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "updated_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuel_prices_updated_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuel_prices"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "shift_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "shifts",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuelings_shift_id_shifts_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "register_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "registers",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuelings_register_id_registers_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "employee_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuelings_employee_id_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "promotion_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "promotions",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuelings_promotion_id_promotions_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "cancelled_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "fuelings_cancelled_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "fuelings"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "promotion_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "promotions",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "promotion_events_promotion_id_promotions_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "employee_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "promotion_events_employee_id_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "promotion_events"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "created_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "promotions_created_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "updated_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "promotions_updated_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "promotions"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "shift_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "shifts",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "register_changes_shift_id_shifts_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "from_register_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "registers",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "register_changes_from_register_id_registers_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "to_register_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "registers",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "register_changes_to_register_id_registers_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "approved_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "register_changes_approved_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "register_changes"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "employee_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "sessions_employee_id_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "sessions"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "employee_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "shifts_employee_id_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "register_id"
+      ],
+      "schemaTo": "public",
+      "tableTo": "registers",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "shifts_register_id_registers_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "shifts"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "updated_by"
+      ],
+      "schemaTo": "public",
+      "tableTo": "employees",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "name": "station_settings_updated_by_employees_id_fkey",
+      "entityType": "fks",
+      "schema": "public",
+      "table": "station_settings"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "announcements_pkey",
+      "schema": "public",
+      "table": "announcements",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "employees_pkey",
+      "schema": "public",
+      "table": "employees",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "fuel_id"
+      ],
+      "nameExplicit": false,
+      "name": "fuel_prices_pkey",
+      "schema": "public",
+      "table": "fuel_prices",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "fuelings_pkey",
+      "schema": "public",
+      "table": "fuelings",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "promotion_events_pkey",
+      "schema": "public",
+      "table": "promotion_events",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "promotions_pkey",
+      "schema": "public",
+      "table": "promotions",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "register_changes_pkey",
+      "schema": "public",
+      "table": "register_changes",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "registers_pkey",
+      "schema": "public",
+      "table": "registers",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "sessions_pkey",
+      "schema": "public",
+      "table": "sessions",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "shifts_pkey",
+      "schema": "public",
+      "table": "shifts",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "key"
+      ],
+      "nameExplicit": false,
+      "name": "station_settings_pkey",
+      "schema": "public",
+      "table": "station_settings",
+      "entityType": "pks"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "login"
+      ],
+      "nullsNotDistinct": false,
+      "name": "employees_login_key",
+      "schema": "public",
+      "table": "employees",
+      "entityType": "uniques"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "client_ref"
+      ],
+      "nullsNotDistinct": false,
+      "name": "fuelings_client_ref_key",
+      "schema": "public",
+      "table": "fuelings",
+      "entityType": "uniques"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "doc_number"
+      ],
+      "nullsNotDistinct": false,
+      "name": "fuelings_doc_number_key",
+      "schema": "public",
+      "table": "fuelings",
+      "entityType": "uniques"
+    },
+    {
+      "nameExplicit": false,
+      "columns": [
+        "code"
+      ],
+      "nullsNotDistinct": false,
+      "name": "registers_code_key",
+      "schema": "public",
+      "table": "registers",
+      "entityType": "uniques"
+    }
+  ],
+  "renames": []
+}
